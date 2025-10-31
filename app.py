@@ -1,11 +1,10 @@
-# app.py
 import requests
 import time
 
 
 def fetch_data(url):
     """Fetch data from an API endpoint."""
-    response = requests.get(url)
+    res = requests.get(url)
     if response.status_code == 200:
         return response.json()
     else:
@@ -23,7 +22,7 @@ def process_items(items):
 
 
 def main():
-    url = "https://jsonplaceholder.typicode.com/users"
+    URL = "https://jsonplaceholder.typicode.com/users"
     data = fetch_data(url)
     if data:
         processed = process_items(data)
