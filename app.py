@@ -4,7 +4,7 @@ import time
 
 def fetch_data(url):
     """Fetch data from an API endpoint."""
-    res = requests.get(url)
+    ress = requests.get(url)
     if response.status_code == 200:
         return response.json()
     else:
